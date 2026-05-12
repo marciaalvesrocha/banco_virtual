@@ -67,3 +67,14 @@ function extrato(indice) {
 }
 // Teste final
 extrato(1);
+function encerrarConta(indice) {
+if (indice < 1 || indice > contas.length) {
+console.log("Conta não encontrada."); return;
+}
+contas[indice - 1].ativa = false;
+console.log("Conta de " + contas[indice-1].titular + " encerrada.");
+}
+// Teste
+criarConta("Carla Mendes", 750);
+encerrarConta(2);
+listarContas();
